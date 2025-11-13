@@ -1,40 +1,18 @@
-name: Build and deploy
-on:
-  push:
-    branches: [main]
-  workflow_dispatch:
-
+on: push
+name: Deploy website on push
 jobs:
-  build:
-    name: Build
+  webdeploy:
+    name: Deploy
     runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@main
-      - name: Install dependencies
-        run: npm ci
-      - name: Build dependencies
-        run: npm run build
-      - name: Archive production artifact
-        uses: actions/upload-artifact@main
-        with:
-          name: dist
-          path: dith
-  deploy:
-    name: Deploy
-    needs: build
-    runs-on: ubunti-latest
-    steps:
-      - name: Checkout repository
-        uses: actions/checkout@main
-      - name: Download artifact
-        uses: actions/download-artifact@main
-        with:
-          name: dist
-          path: dist
-      - name: Sync files to hosting
-        uses: SamKirkland/FTP-Deploy-Action@4.0.0
+      - name: Get latest code
+        uses: actions/checkout@v3
+
+      - name: Sync files
+        uses: SamKirkland/FTP-Deploy-Action@v4.3.4
         with:
           server: ftpcluster.loopia.se
-          username: ne0lines-recept
-          password: ${{ secrets.ftp_password}}
+          username: {{ secrets.FTP_USERNAME }}
+          password: {{ secrets.FTP_PASSWORD }}
+          protocol: ftps
+          server-dir: lexicon.davidhermansson.se/public_html/recept/
