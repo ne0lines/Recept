@@ -1,0 +1,115 @@
+:root {
+--font-family: 'Open Sans';
+--header-border-color:rgb(252,252,252);
+--page-bg-color:rgba(161,0,0,.3);
+--main-bg-color:rgb(252,252,252); 
+--accent-color:rgb(161,0,0);
+--text-color:rgb(0,0,0);
+--notice-bg-color:rgb(235,235,235);
+--header-img:url(../assets/img/95bd14c6df095f9dbf4df15f8c7ab3ba0d597919.jpg);
+}
+*{
+    margin:0px;
+    padding:0px;
+    font-family:var(--font-family);
+    color:var(--text-color);
+}
+body{
+    background:var(--page-bg-color);
+    margin:0px auto;
+    padding-bottom:64px;
+}
+div.container{
+    background:var(--main-bg-color);
+    max-width:1280px;
+    margin:0px auto;
+}
+header{
+    background-image:var(--header-img);
+    background-size:cover;
+    background-position:center;
+    width:100%;
+    min-height:500px;
+    border: 1px solid var(--header-border-color);
+}
+p.notice{
+    background:var(--notice-bg-color);
+    padding:16px;
+}
+section.content{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding:48px 48px 64px 48px;
+    gap:24px;
+}
+section.content h1{
+    font-size:28px;
+    font-weight:700;
+    color:var(--accent-color);
+}
+section.content h2{
+    font-size: 24px;
+    font-weight:700;
+}
+section.content div.ingredients, section.content div.instructions, section.content div.serving-suggestions{
+    display:flex;
+    flex-direction: column;
+    gap:16px;
+}
+section.content div.ingredients ul, section.content div.instructions ol{
+    margin-left:40px;
+    font-size:16px;
+    font-weight:400;
+    line-height:32px;
+}
+section.content div.serving-suggestions ul {
+    width:100%;
+    list-style: none;
+    overflow: hidden;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap:16px;
+}
+section.content div.serving-suggestions ul li{
+    position:relative;
+    flex: 1 1 calc(50% - 8px);
+    box-sizing: border-box;
+    max-width:calc(100% / 2 - 16px);
+    aspect-ratio: 4 / 3;
+    overflow:hidden;
+}
+section.content div.serving-suggestions ul li img{
+    position:absolute;
+    top: 50%;
+    transform:translateY(-50%);
+    width:100%;
+    height:auto;
+    display:block;
+    overflow:hidden;
+}
+@media (max-width: 600px){
+    section.content{
+        padding: 24px 24px 32px 24px;
+    }
+    section.content div.serving-suggestions ul{
+        flex-direction: column;
+        gap:12px;
+    }
+    section.content div.serving-suggestions ul li{
+        flex: 1 1 100%;
+        max-width: 100%;
+        aspect-ratio: 3 / 4;
+    }
+    section.content div.serving-suggestions ul li img{
+        position: static;
+        top: auto;
+        transform: none;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        display: block;
+    }
+}
