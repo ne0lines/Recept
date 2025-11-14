@@ -14,5 +14,5 @@ jobs:
           server: ftpcluster.loopia.se
           username: ${{ secrets.FTP_USERNAME }}
           password: ${{ secrets.FTP_PASSWORD }}
-          protocol: ftps
+          protocol: ftp
           server-dir: lexicon.davidhermansson.se/public_html/recept/
