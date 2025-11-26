@@ -19,7 +19,7 @@ body{
     margin:0px auto;
     padding-bottom:64px;
 }
-div.container{
+main{
     background:var(--main-bg-color);
     max-width:1280px;
     margin:0px auto;
@@ -36,37 +36,37 @@ p.notice{
     background:var(--notice-bg-color);
     padding:16px;
 }
-section.content{
+article{
     display:flex;
     flex-direction: column;
     justify-content: flex-start;
     padding:48px 48px 64px 48px;
     gap:24px;
 }
-section.content h1{
+article h1{
     font-size:28px;
     font-weight:700;
     color:var(--accent-color);
 }
-section.content h2{
+article h2{
     font-size: 24px;
     font-weight:700;
 }
-section.content div.ingredients, section.content div.instructions, section.content div.serving-suggestions{
+section.ingredients, section.instructions, section.serving-suggestions{
     display:flex;
     flex-direction: column;
     gap:16px;
 }
-section.content div.ingredients ul, section.content div.instructions ol{
+section.ingredients ul, section.instructions ol{
     margin-left:40px;
     font-size:16px;
     font-weight:400;
     line-height:32px;
 }
-section.content div.instructions ol{
+section.instructions ol{
     margin-left:24px;
 }
-section.content div.serving-suggestions ul {
+section.serving-suggestions ul {
     width:100%;
     list-style: none;
     overflow: hidden;
@@ -76,7 +76,7 @@ section.content div.serving-suggestions ul {
     justify-content: space-between;
     gap:16px;
 }
-section.content div.serving-suggestions ul li{
+section.serving-suggestions ul li{
     position:relative;
     flex: 1 1 calc(50% - 8px);
     box-sizing: border-box;
@@ -84,7 +84,7 @@ section.content div.serving-suggestions ul li{
     aspect-ratio: 4 / 3;
     overflow:hidden;
 }
-section.content div.serving-suggestions ul li img{
+section.serving-suggestions ul li img{
     position:absolute;
     top: 50%;
     transform:translateY(-50%);
@@ -94,19 +94,19 @@ section.content div.serving-suggestions ul li img{
     overflow:hidden;
 }
 @media (max-width: 600px){
-    section.content{
+    article{
         padding: 48px 16px 64px 16px;
     }
-    section.content div.serving-suggestions ul{
+    section.serving-suggestions ul{
         flex-direction: column;
         gap:24px;
     }
-    section.content div.serving-suggestions ul li{
+    section.serving-suggestions ul li{
         flex: 1 1 100%;
         max-width: 100%;
         aspect-ratio: 3 / 4;
     }
-    section.content div.serving-suggestions ul li img{
+    section.serving-suggestions ul li img{
         position: static;
         top: auto;
         transform: none;
