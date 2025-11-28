@@ -1,15 +1,22 @@
 ## Recept – Pannkaksprojekt
 
-Detta är en enkel webbplats på svenska som presenterar ett klassiskt recept på tunna pannkakor. Sidan fokuserar på tydlig semantisk HTML, grundläggande tillgänglighet samt snabba laddningstider för ett litet statiskt projekt.
+En enkel, statisk webbplats på svenska som visar ett klassiskt recept på tunna pannkakor. Projektet är avsett som ett litet exempel på semantisk HTML, grundläggande tillgänglighet och snabb leverans av statiskt innehåll.
 
-### Vad projektet innehåller
-- `index.html` med receptet strukturerat kring `main`, `article` och semantiska `section`-element för ingredienser, instruktioner och serveringsförslag.
-- `assets/style.css` för layout och typografi samt bildresurser i `assets/img`.
+**Filstruktur:**
+- `index.html` — huvudsida med receptet, uppdelat i semantiska `main`, `article` och `section`-element.
+- `assets/style.css` — grundläggande layout, typografi och responsivitet.
+- `assets/img/` — bildresurser som används på sidan.
 
-### Senaste förbättringar
-- Förtydligat semantiken genom tydliga rubriker, ARIA-kopplingar och separata sektioner som kan förstås av hjälpmedel.
-- Optimerat sidans prestanda med lazy-loading av bilder samt `preconnect`-länkar för Google Fonts.
-- Förberett sidan för effektiv caching med rekommendationer för långa cache-tider på statiska resurser och kortare cache på HTML.
+**Syfte:**
+- Visa gott mark-up-hantverk (semantik, rubriker, listor).
+- Exempel på enkla prestandaoptimeringar (lazy-loading, font-preconnect).
+- Vara lätt att forka och anpassa för små statiska projekt eller övningar.
 
-### Kom igång
-Öppna `index.html` i valfri webbläsare. Anpassa innehåll eller stil genom att redigera filerna i `assets/`.
+**Hur du öppnar sidan:**
+- Dubbelklicka på `index.html` eller öppna filen i en webbläsare.
+
+### Senaste ändringar
+- Förbättrad semantik: tydliga sektioner för ingredienser, instruktioner och servering.
+- Tillgänglighet: förbättrade rubrikstrukturer och ARIA-kopplingar där lämpligt.
+- Prestanda: bilder lazy-loadas och Google Fonts förbindelser preconnectas.
+- Caching: rekommendationer för lång cache på statiska resurser och kortare på HTML.
