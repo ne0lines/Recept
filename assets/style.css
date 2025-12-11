@@ -158,6 +158,9 @@ main.page article section.recepies-container{
         cursor: default;
         &:hover{
             box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
+            >img{
+                filter:brightness(125%);
+            }
         }
         >img{
             width:100%;
