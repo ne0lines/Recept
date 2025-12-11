@@ -1,5 +1,5 @@
 window.addEventListener('load', () => {
-    fetch('/header.html')
+    fetch('./header.html')
         .then(response => response.text())
         .then(html => {
             const container = document.getElementById('header');
