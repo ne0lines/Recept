@@ -55,6 +55,7 @@ header>img{
     width:calc(100% - 2px);
     max-height:500px;
     object-fit: cover;
+    filter:brightness(130%);
 }
 header nav{
     display:flex;
@@ -159,7 +160,7 @@ main.page article section.recepies-container{
         &:hover{
             box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
             >img{
-                filter:brightness(125%);
+                filter:brightness(150%) contrast(90%);
             }
         }
         >img{
@@ -168,6 +169,7 @@ main.page article section.recepies-container{
             aspect-ratio: 1 / 1;
             object-fit: cover;
             cursor:pointer;
+            filter:brightness(130%);
         }
         >h2{
             display:block;
@@ -206,15 +208,6 @@ main.page article section.recepies-container{
         grid-template-columns: repeat(1, minmax(0, 1fr));
     }
 }
-
-
-
-
-
-
-
-
-
 
 main.recept article{
     display:flex;
@@ -285,6 +278,7 @@ main.recept section[aria-labelledby="suggestions"] ul li img{
     height:auto;
     display:block;
     overflow:hidden;
+    filter:brightness(130%);
 }
 main.recept section[aria-labelledby="suggestions"] ul.textual-suggestions{
     list-style: disc;
@@ -323,5 +317,7 @@ main.recept section[aria-labelledby="suggestions"] ul.textual-suggestions li + l
         height: 100%;
         object-fit: cover;
         display: block;
+        filter:brightness(130%);
+
     }
 }
