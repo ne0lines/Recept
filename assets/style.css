@@ -39,7 +39,7 @@ header{
 header>img{
     border: 1px solid var(--header-border-color);
     height:100%;
-    width:100%;
+    width:calc(100% - 2px);
     max-height:500px;
     object-fit: cover;
 }
