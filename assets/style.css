@@ -2,10 +2,17 @@
 --font-family: 'Open Sans';
 --header-border-color:rgb(252,252,252);
 --page-bg-color:rgba(161,0,0,.3);
---main-bg-color:rgb(252,252,252); 
---accent-color:rgb(161,0,0);
+--main-bg-color:rgb(252,252,252);
+--accent-hue: 0;
+--accent-color:         hsla(var(--accent-hue), 100%, 70%, 1);
+--accent-color-dark:    hsla(var(--accent-hue), 100%, 30%, 1);
+--accent-color-light:   hsla(var(--accent-hue), 100%, 90%, 1);
+--accent-color-hover:   hsla(var(--accent-hue), 100%, 80%, 1);
 --text-color:rgb(0,0,0);
 --notice-bg-color:rgb(235,235,235);
+--nav-height:64px;
+--button-border-radius: 5px;
+--logotype-path: url('img/logo.png');
 }
 *{
     margin:0px;
@@ -13,6 +20,7 @@
     font-family:var(--font-family);
     color:var(--text-color);
 }
+
 body{
     background:var(--page-bg-color);
     margin:0px auto;
@@ -24,6 +32,160 @@ main{
     margin:0px auto;
 }
 header{
+    width:100%;
+    border-bottom: 4px solid var(--header-border-color);
+    box-sizing: border-box;
+}
+header>img{
+    border: 1px solid var(--header-border-color);
+    height:100%;
+    width:100%;
+    max-height:500px;
+    object-fit: cover;
+}
+header nav{
+    display:flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width:100%;
+    height:var(--nav-height);
+    box-sizing: border-box;
+    padding:0px 12px;
+    background-color:var(--main-bg-color);
+
+    > a:first-child {
+        display: block;
+        width: 150px;
+        height: var(--nav-height);
+        background-color: var(--accent-color);
+        mask: var(--logotype-path) no-repeat center / contain;
+        -webkit-mask: var(--logotype-path) no-repeat center / contain;
+        transition: transform 0.3s ease, background-color 0.3s ease;
+        &:hover {
+            transform: scale(1.1);
+            background-color: var(--accent-color-hover);
+        }
+    }
+    >a:last-child{
+        text-align:right;
+        text-wrap: nowrap;
+        padding: 6px 12px;
+        border-bottom:3px solid var(--accent-color-dark);
+        border-radius: var(--button-border-radius);
+        background-color:var(--accent-color);
+        color:var(--main-bg-color);
+        text-decoration:none;
+        transition: background-color 0.3s ease, border-color 0.3s ease;
+        &:hover{
+            background-color:var(--accent-color-hover);
+            border-color:var(--accent-color);
+        }
+    }
+    
+    >div{
+        width:100%;
+        display:flex;
+        justify-content: center;
+        align-items: center;
+        gap:24px;
+        >a{
+            display:block;
+            text-decoration:none;
+            color:var(--text-color);
+            &:hover, .active{
+                text-decoration:underline;
+            }
+        }
+    }
+}
+
+main.page{}
+
+main.page article h1{
+    font-size:28px;
+    font-weight:700;
+    color:var(--accent-color);
+    text-align:center;
+}
+
+main.page article section.recepies-container{
+    display:grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap:16px;
+    padding:48px;
+    >a{
+        display:block;
+        text-decoration:none;
+        width:100%;
+        background-color:#FFFFFF;
+        padding:16px;
+        box-sizing: border-box;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        display:flex;
+        flex-direction: column;
+        gap:16px;
+        cursor: default;
+        >img{
+            width:100%;
+            display:block;
+            aspect-ratio: 1 / 1;
+            object-fit: cover;
+            cursor:pointer;
+        }
+        >h2{
+            display:block;
+            font-size:20px;
+            font-weight:700;
+            cursor:pointer;
+            &:hover{
+                text-decoration:underline;
+            }
+        }
+        >p{
+            display:block;
+            font-size:1rem;
+            font-weight:400;
+            line-height:1.2rem;
+            text-wrap: pretty;
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    main.page article section.recepies-container{
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 900px) {
+    main.page article section.recepies-container{
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    main.page article section.recepies-container{
+        grid-template-columns: repeat(1, minmax(0, 1fr));
+    }
+}
+
+
+
+
+
+
+
+
+
+
+main.recept article{
+    display:flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    padding:48px 48px 64px 48px;
+    gap:24px;
+}
+main.recept article header{
     display:flex;
     justify-content: center;
     align-items: center;
@@ -32,48 +194,34 @@ header{
     min-height:500px;
     overflow:hidden;
 }
-header img{
-    border: 1px solid var(--header-border-color);
-    height:100%;
-    width:100%;
-    min-height:500px;
-    object-fit: cover;
-}
-article{
-    display:flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    padding:48px 48px 64px 48px;
-    gap:24px;
-}
-article h1{
+main.recept article h1{
     font-size:28px;
     font-weight:700;
     color:var(--accent-color);
 }
-article h2{
+main.recept article h2{
     font-size: 24px;
     font-weight:700;
 }
-article > p{
+main.recept article > p{
     background:var(--notice-bg-color);
     padding:16px;
 }
-section[aria-labelledby="ingredients"], section[aria-labelledby="instructions"], section[aria-labelledby="suggestions"]{
+main.recept section[aria-labelledby="ingredients"], section[aria-labelledby="instructions"], section[aria-labelledby="suggestions"]{
     display:flex;
     flex-direction: column;
     gap:16px;
 }
-section[aria-labelledby="ingredients"] ul, section[aria-labelledby="instructions"] ol{
+main.recept section[aria-labelledby="ingredients"] ul, section[aria-labelledby="instructions"] ol{
     margin-left:40px;
     font-size:16px;
     font-weight:400;
     line-height:32px;
 }
-section[aria-labelledby="instructions"] ol{
+main.recept section[aria-labelledby="instructions"] ol{
     margin-left:24px;
 }
-section[aria-labelledby="suggestions"] ul {
+main.recept section[aria-labelledby="suggestions"] ul {
     width:100%;
     list-style: none;
     overflow: hidden;
@@ -83,7 +231,7 @@ section[aria-labelledby="suggestions"] ul {
     justify-content: space-between;
     gap:16px;
 }
-section[aria-labelledby="suggestions"] ul li{
+main.recept section[aria-labelledby="suggestions"] ul li{
     position:relative;
     flex: 1 1 calc(50% - 8px);
     box-sizing: border-box;
@@ -91,7 +239,7 @@ section[aria-labelledby="suggestions"] ul li{
     aspect-ratio: 4 / 3;
     overflow:hidden;
 }
-section[aria-labelledby="suggestions"] ul li img{
+main.recept section[aria-labelledby="suggestions"] ul li img{
     position:absolute;
     top: 50%;
     transform:translateY(-50%);
@@ -100,20 +248,36 @@ section[aria-labelledby="suggestions"] ul li img{
     display:block;
     overflow:hidden;
 }
+main.recept section[aria-labelledby="suggestions"] ul.textual-suggestions{
+    list-style: disc;
+    display:block;
+    margin-left:40px;
+    gap:0;
+}
+main.recept section[aria-labelledby="suggestions"] ul.textual-suggestions li{
+    position:static;
+    flex: 0 0 auto;
+    max-width:100%;
+    aspect-ratio:auto;
+    overflow:visible;
+}
+main.recept section[aria-labelledby="suggestions"] ul.textual-suggestions li + li{
+    margin-top:8px;
+}
 @media (max-width: 710px){
-    article{
+    main.recept article{
         padding: 48px 16px 64px 16px;
     }
-    section[aria-labelledby="suggestions"] ul{
+    main.recept section[aria-labelledby="suggestions"] ul{
         flex-direction: column;
         gap:24px;
     }
-    section[aria-labelledby="suggestions"] ul li{
+    main.recept section[aria-labelledby="suggestions"] ul li{
         flex: 1 1 100%;
         max-width: 100%;
         aspect-ratio: 3 / 4;
     }
-    section[aria-labelledby="suggestions"] ul li img{
+    main.recept section[aria-labelledby="suggestions"] ul li img{
         position: static;
         top: auto;
         transform: none;

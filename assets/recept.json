@@ -1,0 +1,225 @@
+{
+  "pannkakor": [
+    {
+      "namn": "Pannkakor med Surströmming & Vanilj",
+      "beskrivning": "En djärv fusion där surströmmingens kraftfulla sälta möter len vanilj och krämig grädde. För dig som söker en riktigt unik smakupplevelse och vill imponera på gäster med ett vågat, oförglömligt pannkaksäventyr.",
+      "ingredienser": [
+        "3 dl vetemjöl",
+        "6 dl mjölk",
+        "3 ägg",
+        "2 msk smör",
+        "100 g surströmmingsfiléer",
+        "1 dl grädde",
+        "2 tsk vaniljsocker",
+        "1 gul lök"
+      ],
+      "instruktioner": [
+        "Vispa ihop mjöl, mjölk, ägg och smält smör.",
+        "Stek tunna pannkakor.",
+        "Mosa surströmmingen med grädde och vaniljsocker.",
+        "Finhacka löken.",
+        "Ringla röran över pannkakorna och toppa med lök."
+      ],
+      "serveringsförslag": [
+        "Servera med iskall mjölk.",
+        "Lägg i burk och servera som 'nordisk delikatess'."
+      ]
+    },
+    {
+      "namn": "Lakrits & Leverpastejp-pannkakor",
+      "beskrivning": "En oväntad kombination där salt lakrits möter krämig leverpastej och bildar en oförglömlig kontrast mellan sötma, sälta och mustiga toner. Perfekt för dig som vill upptäcka pannkakornas rebelliska, okända potential.",
+      "ingredienser": [
+        "3 dl vetemjöl",
+        "6 dl mjölk",
+        "3 ägg",
+        "1 msk smör",
+        "2 msk salt lakritspulver",
+        "150 g leverpastej"
+      ],
+      "instruktioner": [
+        "Blanda pannkakssmeten.",
+        "Tillsätt lakritspulver och stek pannkakor.",
+        "Bred leverpastej på varje pannkaka."
+      ],
+      "serveringsförslag": [
+        "Toppa med extra lakritspulver.",
+        "Servera skuret i rullar som 'gourmetsnacks'."
+      ]
+    },
+    {
+      "namn": "Fiskbulls-pannkakor i Currysås",
+      "beskrivning": "Pannkakor fyllda med fiskbullar ger en oväntad nordisk twist, medan currysåsen tillför värme och aromatiska kryddor. En vågad rätt som kombinerar mild fisk och exotisk curry till en överraskande matupplevelse.",
+      "ingredienser": [
+        "3 dl vetemjöl",
+        "6 dl mjölk",
+        "3 ägg",
+        "1 msk smör",
+        "1 burk fiskbullar (400 g)",
+        "2 dl currysås",
+        "1 msk hackad dill"
+      ],
+      "instruktioner": [
+        "Blanda pannkakssmet.",
+        "Hacka fiskbullarna och blanda i smeten.",
+        "Stek pannkakorna.",
+        "Servera med currysås och dill."
+      ],
+      "serveringsförslag": [
+        "Skär i kuber som 'fisk-tapas'.",
+        "Servera med citronklyftor."
+      ]
+    },
+    {
+      "namn": "Ketchup & Vaniljglass-pannkakor",
+      "beskrivning": "En smakexplosion där varm pannkaka möter kall glass och sötman bryts av med ketchupens syrliga tomattoner. En dessert-och-måltid-hybrid som verkligen överraskar den modiga smakresenären.",
+      "ingredienser": [
+        "3 dl vetemjöl",
+        "6 dl mjölk",
+        "3 ägg",
+        "1 msk smör",
+        "4 kulor vaniljglass",
+        "1 dl ketchup"
+      ],
+      "instruktioner": [
+        "Stek pannkakor.",
+        "Lägg glass i mitten.",
+        "Ringla ketchup över och vik ihop."
+      ],
+      "serveringsförslag": [
+        "Toppa med strössel.",
+        "Servera halvsmält för extra kontrast."
+      ]
+    },
+    {
+      "namn": "Tacos & Banansplit-pannkakor",
+      "beskrivning": "Här möts två världar: kryddig tacofärs och söt banan i kombination med chokladsås. Ett djärvt recept som blandar dessert och middag i ett och lockar den som söker oväntad fusionmatlagning.",
+      "ingredienser": [
+        "3 dl vetemjöl",
+        "6 dl mjölk",
+        "3 ägg",
+        "1 msk smör",
+        "300 g tacofärs",
+        "2 bananer",
+        "1 dl chokladsås",
+        "1 dl salsa"
+      ],
+      "instruktioner": [
+        "Stek pannkakor.",
+        "Fyll med färs, banan, chokladsås och salsa.",
+        "Rulla ihop och servera."
+      ],
+      "serveringsförslag": [
+        "Toppa med krossade nachos.",
+        "Servera med en klick grädde."
+      ]
+    },
+    {
+      "namn": "Rödbetsjuice & Sardiner-pannkakor",
+      "beskrivning": "Rödbetans jordiga sötma färgar pannkakan vackert rosa, medan sardinerna tillför havssälta och fyllighet. En vågad och estetiskt slående rätt som garanterat sticker ut på bordet.",
+      "ingredienser": [
+        "2 dl vetemjöl",
+        "3 dl rödbetsjuice",
+        "3 dl mjölk",
+        "3 ägg",
+        "1 msk smör",
+        "1 burk sardiner i olja",
+        "2 vitlöksklyftor"
+      ],
+      "instruktioner": [
+        "Blanda smet med rödbetsjuice.",
+        "Stek rosa pannkakor.",
+        "Toppa med sardiner och vitlök."
+      ],
+      "serveringsförslag": [
+        "Ringla över sardinolja.",
+        "Servera med citron."
+      ]
+    },
+    {
+      "namn": "Coca-Cola & Ädelost-pannkakor",
+      "beskrivning": "Colans karameliserade sötma möter ädelostens intensiva sälta och skapar en rik, djärv och oväntat komplex smakprofil. Ett perfekt val för den som vill ta pannkakor till helt okända kulinariska territorier.",
+      "ingredienser": [
+        "3 dl vetemjöl",
+        "4 dl Coca-Cola",
+        "2 dl mjölk",
+        "3 ägg",
+        "1 msk smör",
+        "100 g ädelost"
+      ],
+      "instruktioner": [
+        "Blanda smet med cola.",
+        "Stek pannkakor tills de karamelliseras.",
+        "Smula ädelost över de varma pannkakorna."
+      ],
+      "serveringsförslag": [
+        "Servera med extra cola som sås.",
+        "Toppa med rostade nötter."
+      ]
+    },
+    {
+      "namn": "Pepparkaka & Tonfisk-pannkakor",
+      "beskrivning": "En kombination som blandar julens kryddvärme med tonfiskens milda sälta. Resultatet är en märkligt harmonisk kontrast som utmanar smaklökarna och erbjuder en helt ny typ av pannkaksupplevelse.",
+      "ingredienser": [
+        "3 dl vetemjöl",
+        "6 dl mjölk",
+        "3 ägg",
+        "1 msk smör",
+        "2 msk pepparkakskrydda",
+        "1 burk tonfisk i vatten (185 g)",
+        "1 dl creme fraiche"
+      ],
+      "instruktioner": [
+        "Blanda smeten och tillsätt pepparkakskrydda.",
+        "Stek pannkakor.",
+        "Fyll med tonfisk och creme fraiche."
+      ],
+      "serveringsförslag": [
+        "Toppa med lingonsylt.",
+        "Servera kallt för fastare konsistens."
+      ]
+    },
+    {
+      "namn": "Senap & Apelsinmarmelad-pannkakor",
+      "beskrivning": "En livlig kombination där skarp senap möter söt, citrusfrisk marmelad. Resultatet är en överraskande smakresa med både hetta och fräschör – perfekt för den som vill pröva pannkakor med karaktär.",
+      "ingredienser": [
+        "3 dl vetemjöl",
+        "6 dl mjölk",
+        "3 ägg",
+        "1 msk smör",
+        "4 msk stark senap",
+        "4 msk apelsinmarmelad"
+      ],
+      "instruktioner": [
+        "Stek pannkakor.",
+        "Blanda senap och marmelad.",
+        "Bred på pannkakorna och vik ihop."
+      ],
+      "serveringsförslag": [
+        "Toppa med rivet citronskal.",
+        "Servera med en skiva julskinka."
+      ]
+    },
+    {
+      "namn": "Chokladpannkakor med Saltgurka & Majonnäs",
+      "beskrivning": "En provocerande men fascinerande smakmix där kakao möter syrlig saltgurka och krämig majonnäs. En kulinarisk utmaning för dig som vågar kliva helt utanför pannkakans traditionella ramar.",
+      "ingredienser": [
+        "3 dl vetemjöl",
+        "5 dl mjölk",
+        "3 ägg",
+        "2 msk kakao",
+        "1 msk smör",
+        "2 stora saltgurkor",
+        "1 dl majonnäs"
+      ],
+      "instruktioner": [
+        "Blanda kakao i smeten och stek pannkakor.",
+        "Skiva saltgurka tunt.",
+        "Lägg gurka på pannkakan och ringla majonnäs över."
+      ],
+      "serveringsförslag": [
+        "Toppa med hackade jordnötter.",
+        "Servera med varm chokladsås."
+      ]
+    }
+  ]
+}
