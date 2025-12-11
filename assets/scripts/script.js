@@ -3,9 +3,7 @@ window.addEventListener('load', () => {
         .then(response => response.text())
         .then(html => {
             const container = document.getElementById('header');
-            const template = document.createElement('template');
-            template.innerHTML = html.trim();
-            container.prepend(...template.content.childNodes);
+            container.insertAdjacentHTML('afterbegin', html);
         })
         .catch(err => console.error('Failed to load header:', err));
 });
