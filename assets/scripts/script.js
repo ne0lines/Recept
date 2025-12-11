@@ -1,5 +1,5 @@
 window.addEventListener('load', () => {
-    fetch('./header.html')
+    fetch('https://lexicon.davidhermansson.se/recept/header.html')
         .then(response => response.text())
         .then(html => {
             const container = document.getElementById('header');
