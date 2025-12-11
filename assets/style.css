@@ -54,47 +54,60 @@ header nav{
     padding:0px 12px;
     background-color:var(--main-bg-color);
 
-    > a:first-child {
-        display: block;
-        width: 240px;
-        height: var(--nav-height);
-        background-color: var(--accent-color);
-        mask: var(--logotype-path) no-repeat center / contain;
-        -webkit-mask: var(--logotype-path) no-repeat center / contain;
-        transition: transform 0.3s ease, background-color 0.3s ease;
-        &:hover {
-            transform: scale(1.1);
-            background-color: var(--accent-color-hover);
-        }
-    }
-    >a:last-child{
-        text-align:right;
-        text-wrap: nowrap;
-        padding: 6px 12px;
-        border-bottom:3px solid var(--accent-color-dark);
-        border-radius: var(--button-border-radius);
-        background-color:var(--accent-color);
-        color:var(--main-bg-color);
-        text-decoration:none;
-        transition: background-color 0.3s ease, border-color 0.3s ease;
-        &:hover{
-            background-color:var(--accent-color-hover);
-            border-color:var(--accent-color);
-        }
-    }
-    
-    >div{
-        width:100%;
+    >ol{
+        list-style:none;
         display:flex;
-        justify-content: center;
+        width:100%;
+        justify-content: space-between;
         align-items: center;
-        gap:24px;
-        >a{
-            display:block;
-            text-decoration:none;
-            color:var(--text-color);
-            &:hover, .active{
-                text-decoration:underline;
+        >li:first-child>a {
+            display: block;
+            width: 120px;
+            height: var(--nav-height);
+            background-color: var(--accent-color);
+            mask: var(--logotype-path) no-repeat center / contain;
+            -webkit-mask: var(--logotype-path) no-repeat center / contain;
+            transition: transform 0.3s ease, background-color 0.3s ease;
+            &:hover {
+                transform: scale(1.25);
+                background-color: var(--accent-color-hover);
+            }
+        }
+        >li:last-child{
+            text-align:right;
+            >a{
+                text-align:right;
+                text-wrap: nowrap;
+                padding: 6px 12px;
+                border-bottom:3px solid var(--accent-color-dark);
+                border-radius: var(--button-border-radius);
+                background-color:var(--accent-color);
+                color:var(--main-bg-color);
+                text-decoration:none;
+                transition: background-color 0.3s ease, border-color 0.3s ease;
+                &:hover{
+                    background-color:var(--accent-color-hover);
+                    border-color:var(--accent-color);
+                }
+            }
+        }
+        >li{
+            width:100%;
+            >ul{
+                list-style:none;
+                display:flex;
+                justify-content: space-around;
+                align-items: center;
+                >li>a{
+                    width:100%;
+                    display:block;
+                    text-align:center;
+                    text-decoration:none;
+                    color:var(--text-color);
+                    &:hover, .active{
+                        text-decoration:underline;
+                    }
+                }
             }
         }
     }
