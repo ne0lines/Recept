@@ -28,6 +28,9 @@
     outline-offset: 2px;
     border-radius: var(--button-border-radius);
 }
+a[disabled], a[disabled]:hover{
+    pointer-events: none;
+}
 body{
     background:var(--page-bg-color);
     margin:0px auto;
