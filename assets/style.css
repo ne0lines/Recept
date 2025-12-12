@@ -87,7 +87,7 @@ header nav{
                 background-color: var(--accent-color);
                 mask: var(--logotype-path) no-repeat center / contain;
                 -webkit-mask: var(--logotype-path) no-repeat center / contain;
-                transition: transform 0.5s ease, background-color 0.5s ease;
+                transition: all 0.3s ease;
                 &:hover {
                     transform: scale(1.5) translateX(15px);
                     background-color: var(--accent-color-hover);
@@ -106,7 +106,7 @@ header nav{
                 background-color:var(--accent-color);
                 color:var(--main-bg-color);
                 text-decoration:none;
-                transition: background-color 0.5s ease, border-color 0.5s ease;
+                transition: all 0.3s ease;
                 &:hover{
                     background-color:var(--accent-color-hover);
                     border-color:var(--accent-color);
@@ -133,7 +133,7 @@ header nav{
                         color:var(--accent-color-dark);
                         background-color:var(--accent-color-lighter);
                         border-radius: var(--button-border-radius);
-                        transition: background-color 0.5s ease, color 0.5s ease;
+                        transition: all 0.3s ease;
                     }
                 }
             }
@@ -166,10 +166,20 @@ main.page article section.recepies-container{
         flex-direction: column;
         gap:16px;
         cursor: default;
+        border-radius:0;
+        transform:scale(1);
         &:hover{
             box-shadow: 0 6px 10px rgba(0, 0, 0, 0.25);
+            border-radius:calc(var(--button-border-radius) * 2);
+            transform:scale(1.01);
+            transition: all 0.25s ease;
             >img{
                 filter:brightness(150%) contrast(90%);
+                border-radius:calc(var(--button-border-radius) * 2);
+                transition: all 0.25s ease;
+            }
+            >h2{
+                color:var(--accent-color);
             }
         }
         >img{
@@ -178,7 +188,9 @@ main.page article section.recepies-container{
             aspect-ratio: 1 / 1;
             object-fit: cover;
             cursor:pointer;
-            filter:brightness(130%);
+            filter:brightness(130%) contrast(100%);
+            border-radius:0;
+            transition: all 0.5s ease;
         }
         >h2{
             display:block;
@@ -186,6 +198,7 @@ main.page article section.recepies-container{
             font-weight:700;
             cursor:pointer;
             &:hover{
+                color:var(--accent-color-dark);
                 text-decoration:underline;
             }
         }
