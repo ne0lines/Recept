@@ -179,9 +179,6 @@ main.page article section.recepies-container{
                 border-radius:calc(var(--button-border-radius) * 2);
                 transition: all 0.25s ease;
             }
-            >h2{
-                color:var(--accent-color);
-            }
         }
         >img{
             width:100%;
