@@ -152,7 +152,7 @@ main.page article h1{
 
 main.page article section.recepies-container{
     display:grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-template-columns: repeat(4, 1fr);
     gap:16px;
     padding:16px 48px;
     >a{
