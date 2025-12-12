@@ -158,7 +158,6 @@ main.page article section.recepies-container{
     gap:1rem;
     padding:1rem 3rem;
     >a{
-        display:block;
         text-decoration:none;
         width:100%;
         background-color:#FFFFFF;
