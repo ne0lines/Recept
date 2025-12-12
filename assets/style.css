@@ -123,7 +123,8 @@ header nav{
                 gap:2vw;
                 >li>a{
                     width:100%;
-                    padding: 8px 12px 10px 12px;
+                    padding: 6px 8px 7px 8px;
+                    margin: 2px 4px 3px 4px;
                     display:block;
                     text-align:center;
                     text-decoration:none;
