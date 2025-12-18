@@ -154,6 +154,17 @@ header nav{
                         transition: all 0.3s ease;
                     }
                 }
+                @media(max-width: 38rem){
+                    gap:0rem;
+                    justify-content: space-around;
+                    >li{
+                        font-size:.875rem;
+                        >a{
+                            padding: 0;
+                            margin: 0;
+                        }
+                    }
+                }
             }
         }
     }
@@ -352,34 +363,6 @@ main.page article section.recepies-container{
         grid-template-columns: repeat(1, minmax(0, 1fr));
     }
 
-    /* Compact nav for mobile viewport */
-    main>header>nav>ol>li:nth-child(2){
-        display:none;
-    }
-    main>header>nav>ol>li:nth-child(3){
-        display:block;
-        >ul{
-            gap:0rem;
-            justify-content: space-around;
-            >li{
-                font-size:.875rem;
-                >a{
-                    padding: 0;
-                    margin: 0;
-                }
-            }
-        }
-    }
-}
-
-/* == Responsive: Global Navigation (desktop) == */
-@media (min-width: 38rem){
-    main>header>nav>ol>li:nth-child(2){
-        display:block;
-    }
-    main>header>nav>ol>li:nth-child(3){
-        display:none;
-    }
 }
 
 /* ========================================
