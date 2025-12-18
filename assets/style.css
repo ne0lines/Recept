@@ -1,3 +1,6 @@
+/* ========================================
+   Root-Level Custom Properties
+======================================== */
 :root {
 --font-family: 'Open Sans';
 --header-border-color:rgb(252,252,252);
@@ -11,12 +14,17 @@
 --accent-color-hover:   hsla(var(--accent-hue), 100%, 80%, 1);
 --accent-color-muted:   hsla(var(--accent-hue), 100%, 10%, 0.3);
 --text-color:rgb(0,0,0);
+--text-color-muted:hsla(0, 0%, 0%, 0.5);
 --text-color-slightly-muted:hsla(0, 0%, 20%, 0.8);
 --notice-bg-color:rgb(235,235,235);
 --nav-height:4rem;
 --button-border-radius: 0.3rem;
 --logotype-path: url('img/logo.png');
 }
+
+/* ========================================
+   Global Reset & Accessibility Defaults
+======================================== */
 *{
     margin:0;
     padding:0;
@@ -28,6 +36,10 @@
     outline-offset: 0.125rem;
     border-radius: var(--button-border-radius);
 }
+
+/* ========================================
+   Page-Level Layout Structure
+======================================== */
 body{
     background:var(--page-bg-color);
     margin:0 auto;
@@ -63,6 +75,9 @@ header>img{
     filter:brightness(130%);
 }
 
+/* ========================================
+   Global Header & Navigation
+======================================== */
 header nav{
     display:flex;
     justify-content: space-evenly;
@@ -144,6 +159,113 @@ header nav{
     }
 }
 
+/* ========================================
+   Form Controls
+======================================== */
+form input, form textarea{
+    width:100%;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    border: 0.1rem solid var(--accent-color-muted);
+    border-radius: var(--button-border-radius);
+    margin-bottom:2rem;
+    font-size:1rem;
+    font-family:var(--font-family);
+    &[type="checkbox"]{
+        float:left;
+        height:auto;
+        width:auto;
+        margin-right:0.5rem;
+        margin-bottom:0;
+    }
+    &:focus{
+        border-color:var(--accent-color-dark);
+    }
+    &::placeholder{
+        color:var(--text-color-muted);
+    }
+}
+form select{
+    width:100%;
+    padding: 0.5rem;
+    box-sizing: border-box;
+    border: 0.1rem solid var(--accent-color-muted);
+    border-radius: var(--button-border-radius);
+    margin-bottom:2rem;
+    font-size:1rem;
+    font-family:var(--font-family);
+    &:focus{
+        border-color:var(--accent-color-dark);
+    }
+    >option{
+        color:blue;
+        &.placeholder{
+            color:red;
+        }
+    }
+}
+
+form label{
+    display:block;
+    margin-bottom:0.25rem;
+    font-weight:700;
+}
+form .agree-container{
+    display:flex;
+    justify-content: space-between;
+    gap:.5rem;
+    margin-bottom:2rem;
+    >div{
+        width:100%;
+        display:flex;
+        align-items: center;
+        justify-content: flex-start;
+        >label{
+            margin:0;
+        }
+    }
+    @media(max-width: 38rem){
+        flex-direction: column;
+        align-items: flex-start;
+    }
+}
+form button:last-child{
+    margin-left:.5rem;
+}
+
+/* ========================================
+   Button Styling
+======================================== */
+.btn{
+    text-align:right;
+    text-wrap: nowrap;
+    padding: 0.4rem 0.75rem;
+    border:0 none;
+    border-bottom:0.2rem solid var(--accent-color-dark);
+    border-radius: var(--button-border-radius);
+    background-color:var(--accent-color);
+    color:var(--main-bg-color);
+    text-decoration:none;
+    transition: all 0.3s ease;
+    &:hover{
+        background-color:var(--accent-color-hover);
+        border-color:var(--accent-color);
+    }
+
+    &.muted{
+        background-color:var(--accent-color-lighter);
+        color:var(--text-color-muted);
+        border-bottom:0.2rem solid var(--accent-color-muted);
+        &:hover{
+            background-color:var(--accent-color-light);
+            border-color:var(--accent-color-dark);
+        }
+    }
+}
+
+/* ========================================
+   Recipe Listing Page
+======================================== */
 main.page article h1{
     font-size:1.75rem;
     font-weight:700;
@@ -212,6 +334,7 @@ main.page article section.recepies-container{
     }
 }
 
+/* == Responsive: Recipe Listing Grid == */
 @media (max-width: 75rem) {
     main.page article section.recepies-container{
         grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -229,6 +352,7 @@ main.page article section.recepies-container{
         grid-template-columns: repeat(1, minmax(0, 1fr));
     }
 
+    /* Compact nav for mobile viewport */
     main>header>nav>ol>li:nth-child(2){
         display:none;
     }
@@ -247,6 +371,8 @@ main.page article section.recepies-container{
         }
     }
 }
+
+/* == Responsive: Global Navigation (desktop) == */
 @media (min-width: 38rem){
     main>header>nav>ol>li:nth-child(2){
         display:block;
@@ -255,6 +381,10 @@ main.page article section.recepies-container{
         display:none;
     }
 }
+
+/* ========================================
+   Individual Recipe Page
+======================================== */
 main.recept article{
     display:flex;
     flex-direction: column;
@@ -342,6 +472,8 @@ main.recept section[aria-labelledby="suggestions"] ul.textual-suggestions li{
 main.recept section[aria-labelledby="suggestions"] ul.textual-suggestions li + li{
     margin-top:0.5rem;
 }
+
+/* == Responsive: Individual Recipe Page == */
 @media (max-width: 45rem){
     main.recept article{
         padding: 3rem 1rem 4rem 1rem;

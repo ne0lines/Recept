@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="sv">
+    <head> 
+        <meta charset="UTF-8" /> 
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta name="description" content="Kontakta Gourmetsmet för frågor och support" />
+        <title>Kontakta Gourmetsmet</title>
+        <link href="https://fonts.googleapis.com" rel="preconnect" crossorigin>
+        <link href='https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap' rel='stylesheet' />
+        <link href="../assets/style.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <main class="recept">
+            <header>
+                <nav aria-label="Huvudmeny">
+                    <ol>
+                        <li><a href="https://lexicon.davidhermansson.se/recept/" aria-label="Gourmetsmet - Startsida"></a></li>
+                        <li>
+                            <ul>
+                                <li><a href="https://lexicon.davidhermansson.se/recept/" aria-label="Alla recept">Alla recept</a></li>
+                                <li><a href="https://lexicon.davidhermansson.se/om-oss/" onclick="javascript:return false;" onmouseup="alert('Informationen om oss är tillfälligt nedtagen\nmed anledning av pågående domstolsprocess\noch ett mindre...omfattande läckage\nav personuppgifter.');" aria-label="Om oss">Om oss</a></li>
+                                <li><a href="https://lexicon.davidhermansson.se/kontakt/" onclick="javascript:return false;" onmouseup="javascript:void(0);alert('På grund av pågående domstolsprocess\när vi i dagsläget inte tillåtna att ha\nnågon kontakt med potentiella kunder.');" aria-label="Kontakta oss">Kontakt</a></li>
+                            </ul>
+                        </li>
+                        <li>
+                            <ul>
+                                <li><a href="https://lexicon.davidhermansson.se/recept/" aria-label="Alla recept">Alla recept</a></li>
+                                <li><a href="https://lexicon.davidhermansson.se/om-oss/" onclick="javascript:return false;" onmouseup="alert('Informationen om oss är tillfälligt nedtagen\nmed anledning av pågående domstolsprocess\noch ett mindre...omfattande läckage\nav personuppgifter.');" aria-label="Om oss">Om oss</a></li>
+                                <li><a href="https://lexicon.davidhermansson.se/kontakt/" aria-label="Kontakta oss">Kontakt</a></li>
+                            </ul>
+                        </li>
+                        <li><a href="https://lexicon.davidhermansson.se/logga-in/" onclick="javascript:return false;" onmouseup="javascript:void(0);alert('Information: Personnummer, e-post och lösenord har läckt.\nDu kan fortfarande logga in, men ID-kapning kan förekomma.\nVi ser över våra rutiner så snart vi kommit hem från en välbehövlig\nsemester i Thailand.');" aria-label="Logga in">Logga in</a></li>
+                    </ol>
+                </nav> 
+                <img src="../assets/img/kontakt.webp" alt="Sunkigt kontorslandskap" />
+            </header>
+            <article aria-label="Kontaktformulär">
+                <h1>Kontaktformulär</h1>
+                <p><em><strong>Observera:</strong> På grund av pågående domstolsprocess är vi i dagsläget inte tillåtna att ha någon kontakt med potentiella kunder, så om vi väljer att svara just dig kommer du inte att få något svar från oss innan domstolsprocessen är avslutad.</em></p>
+                <form action="#" onsubmit="event.preventDefault();alert('Din kontaktförfrågan är skickad!');document.forms[0].reset();" method="POST">
+                    <label for="name">Namn</label>
+                    <input type="text" id="name" name="name" placeholder="Ditt namn" required />
+
+                    <label for="email">E-post</label>
+                    <input type="email" id="email" name="email" placeholder="din@email.com" required />
+
+                    <label for="department">Avdelning</label>
+                    <select id="department" name="department" required>
+                        <option value="" class="placeholder">Välj avdelning</option>
+                        <option value="kundtjanst">Kundtjänst</option>
+                        <option value="teknisk_support">Teknisk support</option>
+                        <option value="försäljning">Försäljning</option>
+                        <option value="juridik">Juridik</option>
+                    </select>
+
+                    <label for="message">Meddelande</label>
+                    <textarea id="message" name="message" rows="4" placeholder="Skriv ditt meddelande här" required></textarea>
+
+                    <label for="attachment">Bifoga fil (valfritt)</label>
+                    <input type="file" id="attachment" name="attachment" aria-label="Bifoga fil (valfritt)" />
+
+                    <div class="agree-container">
+                        <div>
+                            <input type="checkbox" id="subscribe" name="subscribe" required />
+                            <label for="subscribe">Prenumerera på vårt nyhetsbrev</label>
+                        </div>
+                        <div>
+                            <input type="checkbox" id="privacy" name="privacy" required />
+                            <label for="privacy">Jag godkänner <a href="../integritetspolicy.html" onclick="javascript:return false;" onmouseup="alert('Vår integritetspolicy är juridiskt ifrågasatt, vilket innebär att vi inte kan garantera fullständig säkerhet för dina uppgifter.');" target="_blank" rel="noopener">integritetspolicyn</a></label>
+                        </div>
+                    </div>
+
+                    <button type="submit" class="btn">Skicka</button>
+                    <button type="reset" class="btn muted">Återställ</button>
+                </form>
+            </article>
+        </main>  
+        <script src="../assets/scripts/script.js" type="text/javascript" defer></script>
+    </body>
+</html>
